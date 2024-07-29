@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islamic_c11/colors.dart';
 import 'package:islamic_c11/hadeth_deatils_screen.dart';
 import 'package:islamic_c11/hadeth_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AhdethTab extends StatefulWidget {
   AhdethTab({Key? key}) : super(key: key);
@@ -33,19 +34,16 @@ class _AhdethTabState extends State<AhdethTab> {
         ),
         Divider(
           thickness: 2,
-          color: AppColors.primaryColor,
+
         ),
         Text(
-          "Ahadeth",
+          AppLocalizations.of(context)!.ahadeth,
           textAlign: TextAlign.center,
-          style: GoogleFonts.elMessiri(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         Divider(
           thickness: 2,
-          color: AppColors.primaryColor,
+
         ),
         Expanded(
           child: ListView.separated(separatorBuilder: (context,index)=>Divider(),
@@ -57,10 +55,7 @@ class _AhdethTabState extends State<AhdethTab> {
               },
               child: Text(allAhadeth[index].title,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.elMessiri(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),),
+                style: Theme.of(context).textTheme.bodyMedium),
             );
           },
           itemCount:allAhadeth.length,

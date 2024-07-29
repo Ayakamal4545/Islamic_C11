@@ -26,14 +26,9 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
           image:
               DecorationImage(image: AssetImage("assets/images/main_pg.png"))),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          centerTitle: true,
-          title: Text(
-            model.name,
-            style: GoogleFonts.elMessiri(
-                fontSize: 30, fontWeight: FontWeight.bold),
+          //centerTitle: true,
+          title: Text( model.name,
           ),
         ),
         body: Card(

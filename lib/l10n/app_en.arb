@@ -1,0 +1,13 @@
+{
+    "islami": "اسلامي",
+    "sura_names":"اسم السورة",
+    "numofayat":"عدد الايات",
+    "ahadeth":"الاحاديث",
+    "theme":"مظهر",
+    "dark":"ليلي",
+    "light":"نهاري",
+    "language":"اللغة",
+    "english":"انجليزي",
+    "arabic":"عربي"
+
+  }

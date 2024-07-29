@@ -9,20 +9,28 @@ class HadethDeatilsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var model=ModalRoute.of(context)?.settings.arguments as HadethModel;
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(model.title),
+    return Container(
+      decoration:BoxDecoration(
+        image: DecorationImage(image: AssetImage("assets/images/main_pg.png")
+        )
       ),
-      body: ListView.builder(itemBuilder: (context,index){
-        return Text(model.content[index],
-        style:GoogleFonts.elMessiri(
-          fontSize: 25,
-            wordSpacing: 5,
-          fontWeight: FontWeight.bold
-        ) ,);
-
-      },
-        itemCount: model.content.length,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(model.title),
+        ),
+        body:Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Card(
+            child: ListView.builder(itemBuilder: (context,index){
+              return Text(
+                model.content[index],
+              style:Theme.of(context).textTheme.bodyLarge ,);
+            
+            },
+              itemCount: model.content.length,
+            ),
+          ),
+        ),
       ),
     );
 
