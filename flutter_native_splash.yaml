@@ -59,6 +59,7 @@ flutter_native_splash:
     # 768 pixels in diameter.
     image: assets/images/splash.png
 
+
     # Splash screen background color.
     color: "#FFFFFF"
 

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localeProvider = Provider.of<LocaleProvider>(context);
+    final languageProvider = Provider.of<LocaleProvider>(context);
     final pro =Provider.of<MyProvider>(context);
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
         HadethDeatilsScreen.routeName: (context) => HadethDeatilsScreen(),
       },
-      locale: localeProvider.locale,
+      locale: Locale(languageProvider.language!.languageCode, ""),
     );
   }
 }
